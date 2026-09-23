@@ -2,7 +2,9 @@ const { Item, Shop } = require("../src/gilded_rose.js");
 // You need more tests than just the ones written here, this is just to get you started.
 // USE COVERAGE GUTTERS TO GUIDE YOUR TEST WRITING
 describe("Gilded Rose Pin Down Tests", () => {
-  test("Normal items should degrade in quality by 1 each day", () => {
+
+  describe("Quality", () => {
+    test("Normal items should degrade in quality by 1 each day", () => {
     let normalItem = new Item("normal", 10, 20); //build
     const gildedRose = new Shop([normalItem]);
 
@@ -32,4 +34,6 @@ describe("Gilded Rose Pin Down Tests", () => {
     
     expect(items[0].quality).toBe(23);
   });
+    
+  })
 });
