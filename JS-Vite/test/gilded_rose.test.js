@@ -4,7 +4,8 @@ import { Item, Shop } from "../src/gilded_rose.js";
 // These tests are only a starting point. Add tests to pin down every rule
 // before refactoring the production code.
 describe("Gilded Rose pin-down tests", () => {
-  test("normal items degrade in quality by 1 each day", () => {
+  describe("Quality rules", () => { 
+    test("normal items degrade in quality by 1 each day", () => {
     const normalItem = new Item("normal", 10, 20);
     const gildedRose = new Shop([normalItem]);
 
@@ -34,4 +35,6 @@ describe("Gilded Rose pin-down tests", () => {
 
     expect(items[0].quality).toBe(23);
   });
+  });
+  
 });
